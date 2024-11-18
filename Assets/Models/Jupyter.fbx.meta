@@ -3,7 +3,12 @@ guid: 56fe28d59a24dd64aa82dff9bee08450
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jupyter
+    second: {fileID: 2100000, guid: ad1584971597158469603aabd16fc040, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
