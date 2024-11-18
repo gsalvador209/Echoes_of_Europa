@@ -18,11 +18,23 @@ public class Transitions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W))
         {
             controller.SetBool("W_key",true);
-            Debug.Log("Deberia avanzar el modelo");
+            //Debug.Log("Deberia avanzar el modelo");
         }
-        else
+        
+        if (Input.GetKeyUp(KeyCode.W))
         {
+            //Debug.Log("Se dejó de presionar la tecla");
             controller.SetBool("W_key", false);
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            controller.SetBool("LeftShift_key", true);
+        }
+
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            controller.SetBool("LeftShift_key", false);
         }
     }
 }
