@@ -3,7 +3,22 @@ guid: 68193de53fbfd6240a4d01edf7c30bde
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pasto
+    second: {fileID: 2100000, guid: 390d7cbbd4f797240a7d60fc1cbfaf19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Roca
+    second: {fileID: 2100000, guid: be2a844fe468e54438fa0c8b4b2d58d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Water
+    second: {fileID: 2100000, guid: ef4381b5cb1095741aee97591aaaa9f4, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
