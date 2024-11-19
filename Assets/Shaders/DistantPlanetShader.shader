@@ -3,7 +3,7 @@ Shader "Custom/DistantPlanetShader"
     Properties
     {
         _MainTex ("Base Texture", 2D) = "white" {}
-        _SkyColor ("Sky Color", Color) = (0.5, 0.7, 1, 1)
+        //_SkyColor ("Sky Color", Color) = (0.5, 0.7, 1, 1)
     }
     SubShader
     {
@@ -30,14 +30,13 @@ Shader "Custom/DistantPlanetShader"
             struct v2f
             {
                 float4 pos : SV_POSITION;
-                float3 normal : TEXCOORD0;
+                float2 uv : TEXCOORD0;
                 float3 worldPos : TEXCOORD1;
-                float uv : TEXCOORD2;
+                float3 normal : TEXCOORD2;
             };
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-            float4 _SkyColor;
+            sampler2D _MainTex; //Textura principal
+            float4 _MainTex_ST; //Control del desplazamiento y escala de la textura
 
             // Colores para el cielo en diferentes momentos del día
             float4 skyColorBlue = float4(0.5, 0.7, 1, 1);     // Azul
@@ -51,7 +50,8 @@ Shader "Custom/DistantPlanetShader"
                 o.normal = UnityObjectToWorldNormal(v.normal);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 o.uv = v.uv;
-                return o;
+               
+				return o;
             }
 
             float4 frag (v2f i) : SV_Target
@@ -82,7 +82,7 @@ Shader "Custom/DistantPlanetShader"
 
                 // Blend the interpolated sky color with the texture based on light intensity
                 float lightIntensity = saturate(dot(lightDir, i.normal)); // Light intensity based on the angle
-                lightIntensity = pow(lightIntensity, 0.9);  // Optional: adjust light intensity contrast (smooths light transitions)
+                lightIntensity = pow(lightIntensity, 0.8);  // Optional: adjust light intensity contrast (smooths light transitions)
 
                 // Instead of affecting the sky color with light intensity, only blend it
                 float3 skyBlend = lerp(interpolatedSkyColor, texColor, lightIntensity);
