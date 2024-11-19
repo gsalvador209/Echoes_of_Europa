@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vino Mate
+  m_Name: Beige
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_Parent: {fileID: 2100000, guid: 2212744362d9a714b94838658906d86a, type: 2}
+  m_Parent: {fileID: 2100000, guid: 9a6dbe72623d0ee4591bf0a2adb3f797, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -24,7 +24,8 @@ Material:
     serializedVersion: 3
     m_TexEnvs: []
     m_Ints: []
-    m_Floats: []
+    m_Floats:
+    - _Glossiness: 0.5
     m_Colors:
-    - _Color: {r: 0.4245283, g: 0.09411712, b: 0.09411712, a: 1}
+    - _Color: {r: 0.8207547, g: 0.6436813, b: 0.38327694, a: 1}
   m_BuildTextureStacks: []
