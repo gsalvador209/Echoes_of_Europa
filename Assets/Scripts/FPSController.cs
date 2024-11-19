@@ -12,12 +12,17 @@ public class FPSController : MonoBehaviour
     public float lookXLimit = 45.0f;
     public float jumpPower = 7f;
 
+    public Light flashlight;
+    float flashlightTiltSpeed = 2.0f; //Velocidad de inclinación
+    float flashlightTiltLimit = 30.0f;
+
     public bool canMove = true;
     CharacterController characterController;
     Animator animator;
 
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0;
+    float flashlightRotationX = 0;
     float gravity = 9.81f;
 
     float walkSpeed = 3.5f;
@@ -30,6 +35,9 @@ public class FPSController : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        if (flashlight != null)
+            flashlight.enabled = false;
     }
 
     // Update is called once per frame
@@ -49,6 +57,24 @@ public class FPSController : MonoBehaviour
 
         #endregion
 
+        #region Handles Flashlight
+        if (flashlight != null)
+        {
+            // Toggle flashlight on/off with F
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                flashlight.enabled = !flashlight.enabled;
+            }
+
+            // Adjust flashlight tilt with mouse
+            if (flashlight.enabled)
+            {
+                flashlightRotationX += -Input.GetAxis("Mouse Y") * flashlightTiltSpeed;
+                flashlightRotationX = Mathf.Clamp(flashlightRotationX, -flashlightTiltLimit, flashlightTiltLimit);
+                flashlight.transform.localRotation = Quaternion.Euler(flashlightRotationX, 0, 0);
+            }
+        }
+        #endregion
 
         #region Handles Jumping
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
