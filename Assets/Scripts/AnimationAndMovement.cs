@@ -20,9 +20,9 @@ public class AnimationAndMovement : MonoBehaviour
     Vector3 currentRunMovement;
     bool isMovementPressed;
     bool isRunPressed;
-    float rotationFactorPerFrame = 15.0f;
-    float walkVelocityPerFrame = 3.5f;
-    float runVelocityPerFrame = 7.0f;
+    public float rotationFactorPerFrame = 15.0f;
+    public float walkVelocityPerFrame = 3.5f;
+    public float runVelocityPerFrame = 7.0f;
 
     void Awake()
     {
@@ -34,12 +34,12 @@ public class AnimationAndMovement : MonoBehaviour
         isRunningHash = Animator.StringToHash("isRunning");
 
 
-        player_input.ControlesPersonaje.Mover.started += onMomeventInput;
-        player_input.ControlesPersonaje.Mover.canceled += onMomeventInput;
-        player_input.ControlesPersonaje.Mover.performed += onMomeventInput;
+        //player_input.ControlesPersonaje.Mover.started += onMomeventInput;
+        //player_input.ControlesPersonaje.Mover.canceled += onMomeventInput;
+        //player_input.ControlesPersonaje.Mover.performed += onMomeventInput;
 
-        player_input.ControlesPersonaje.Run.started += onRun;
-        player_input.ControlesPersonaje.Run.canceled += onRun;
+        //player_input.ControlesPersonaje.Run.started += onRun;
+        //player_input.ControlesPersonaje.Run.canceled += onRun;
     }
 
     void onRun(InputAction.CallbackContext context)
@@ -47,31 +47,31 @@ public class AnimationAndMovement : MonoBehaviour
         isRunPressed = context.ReadValueAsButton(); //Set the bool
     }
 
-    void handleRotation()
-    {
-        Vector3 positionToLookAt;
+    //void handleRotation()
+    //{
+    //    //Vector3 positionToLookAt;
 
-        positionToLookAt.x = currentMovement.x;
-        positionToLookAt.y = 0.0f;
-        positionToLookAt.z = currentMovement.z;
+    //    //positionToLookAt.x = currentMovement.x;
+    //    //positionToLookAt.y = 0.0f;
+    //    //positionToLookAt.z = currentMovement.z;
 
 
-        Quaternion currentRotation = transform.rotation;
+    //    Quaternion currentRotation = transform.rotation;
 
-        if (isMovementPressed)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
-            transform.rotation =  Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame*Time.deltaTime); //Interpola en circulo
-            
-        }
+    //    if (isMovementPressed)
+    //    {
+    //        Quaternion targetRotation = Quaternion.LookRotation(positionToLookAt);
+    //        transform.rotation =  Quaternion.Slerp(currentRotation, targetRotation, rotationFactorPerFrame*Time.deltaTime); //Interpola en circulo
 
-    }
+    //    }
+
+    //}
 
     void onMomeventInput(InputAction.CallbackContext context)
     {
         currentMovementInput = context.ReadValue<Vector2>();
-        currentMovement.x = currentMovementInput.x*walkVelocityPerFrame;
-        currentMovement.z = currentMovementInput.y*walkVelocityPerFrame;
+        currentMovement.x = currentMovementInput.x * walkVelocityPerFrame;
+        currentMovement.z = currentMovementInput.y * walkVelocityPerFrame;
         currentRunMovement.x = currentMovementInput.x * runVelocityPerFrame;
         currentRunMovement.z = currentMovementInput.y * runVelocityPerFrame;
         isMovementPressed = currentMovementInput.x != 0 || currentMovementInput.y != 0;
@@ -108,38 +108,38 @@ public class AnimationAndMovement : MonoBehaviour
 
     }
 
-    void handleGravity()
-    {
-        if (characterController.isGrounded)
-        {
-            float groundedGravity = -0.05f;
-            currentMovement.y = groundedGravity;
-            currentRunMovement.y = groundedGravity;
-        }
-        else
-        {
-            float gravity = -9.81f;
-            currentMovement.y = gravity;
-            currentRunMovement.y = gravity;
-        }
-    }
+    //void handleGravity()
+    //{
+    //    if (characterController.isGrounded)
+    //    {
+    //        float groundedGravity = -0.05f;
+    //        currentMovement.y = groundedGravity;
+    //        currentRunMovement.y = groundedGravity;
+    //    }
+    //    else
+    //    {
+    //        float gravity = -9.81f;
+    //        currentMovement.y = gravity;
+    //        currentRunMovement.y = gravity;
+    //    }
+    //}
 
 
     // Update is called once per frame
     void Update()
     {
-        handleGravity();
-        handleRotation();
+        //handleGravity();
+        //handleRotation();
         handleAnimations();
 
-        if (isRunPressed)
-        {
-            characterController.Move(currentRunMovement * Time.deltaTime);
-        }
-        else
-        {    
-             characterController.Move(currentMovement * Time.deltaTime);
-        }
+        //if (isRunPressed)
+        //{
+        //    characterController.Move(currentRunMovement * Time.deltaTime);
+        //}
+        //else
+        //{    
+        //     characterController.Move(currentMovement * Time.deltaTime);
+        //}
 
     }
 
