@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: ce189e11828917748b52186daf15db97
+guid: fcd8ff07e45e0ad4494b64849fbc36a2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Astro
-    second: {fileID: 2100000, guid: 60648d7ba0d6b7d4abb65fdb900d6963, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Bandera
-    second: {fileID: 2100000, guid: a86b608dbc7803443b7c1227445fcc47, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Oro
-    second: {fileID: 2100000, guid: 1a8edbfc597c12344b9707e6c135339d, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -47,12 +32,12 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
