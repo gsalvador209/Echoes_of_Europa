@@ -22,15 +22,15 @@ MonoBehaviour:
   m_simpleParticleRestitution: 0
   m_simpleParticleAdhesion: 0
   m_simpleParticleDamping: 0
-  m_simpleClothWind: {x: 1, y: 1, z: 0}
-  m_simpleClothDrag: 10
+  m_simpleClothWind: {x: 1, y: 29.41, z: 0}
+  m_simpleClothDrag: 15.38
   m_simpleClothLift: 10
   m_simpleFluidCohesion: 0.025
   m_simpleFluidTension: 0.01
   m_simpleFluidViscosity: 0
   m_simpleFluidVorticity: 0
   m_simpleFluidAnisotropy: 2
-  m_simpleFluidMinScale: 0.2
+  m_simpleFluidMinScale: 0
   m_simpleFluidMaxScale: 1
   m_maxParticles: 25000
   m_maxDiffuse: 0
@@ -54,8 +54,8 @@ MonoBehaviour:
   m_shockPropagation: 0
   m_dissipation: 0
   m_damping: 0
-  m_wind: {x: 1, y: 1, z: 0}
-  m_drag: 10
+  m_wind: {x: 1, y: 29.41, z: 0}
+  m_drag: 15.38
   m_lift: 10
   m_fluid: 1
   m_cohesion: 0.025
@@ -63,7 +63,7 @@ MonoBehaviour:
   m_viscosity: 0
   m_vorticityConfinement: 0
   m_anisotropyScale: 2
-  m_anisotropyMin: 0.2
+  m_anisotropyMin: 0
   m_anisotropyMax: 1
   m_smoothing: 0
   m_solidPressure: 0

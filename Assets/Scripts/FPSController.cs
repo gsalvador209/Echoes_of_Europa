@@ -25,8 +25,8 @@ public class FPSController : MonoBehaviour
     float flashlightRotationX = 0;
     float gravity = 9.81f;
 
-    float walkSpeed = 3.5f;
-    float runSpeed =  7.0f;
+    float walkSpeed = 7.0f;
+    float runSpeed =  15.0f;
 
     // Start is called before the first frame update
     void Start()
