@@ -2518,9 +2518,9 @@ MonoBehaviour:
   m_selfCollideFilter: 0
   m_fluid: 0
   m_massScale: 1
-  m_drawParticles: 0
+  m_drawParticles: 1
   m_recreateActor: 0
-  m_asset: {fileID: 11400000, guid: 39a5ec0ac8dff3f4185440b7020cc57a, type: 2}
+  m_asset: {fileID: 0}
 --- !u!4 &706837705
 Transform:
   m_ObjectHideFlags: 0
@@ -2529,13 +2529,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 706837703}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 72.016014, y: 29, z: -49.092674}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1001 &794877258
 PrefabInstance:
   m_ObjectHideFlags: 0
