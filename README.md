@@ -17,31 +17,21 @@ Echoes of Europa is an educational and technical showcase developed using Unity 
 ### 🎮 Gameplay Experience
 
 This first-person exploration provides an educational journey through distinct ecosystems on Europa:
-
 Engage in dynamic physics-based interactions.
-
 Explore educational content detailing Europa's geology and potential habitability.
-
 Interact with realistic simulations of fluid dynamics, cloth movement, rigid objects, and soft body deformation.
 
 
 ### 💡 Key Technical Features
 
-Advanced 3D Modeling: Utilizes geometric, hierarchical, mechanical, organic, and physics-based modeling techniques in Blender.
-
-Physics Simulations: Leveraging NVIDIA Flex, including:
-
-Water dynamics in ponds and droplets.
-
-Cloth behavior for realistic flag movements.
-
-Rigid and deformable object interactions, exemplified by rocks and mushrooms.
-
-Custom Shader Development: ShaderLab scripts for realistic planetary gradients and ocean waves.
-
-Real-time Animations: Integrated with Unity's Input System package for responsive and natural avatar movements.
-
-Immersive Camera and Lighting: First-person camera setups with dynamic rotation and adaptive lighting for atmospheric realism.
+- **Advanced 3D Modeling**: Utilizes geometric, hierarchical, mechanical, organic, and physics-based modeling techniques in Blender.
+- **Physics Simulations**: Leveraging NVIDIA Flex, including:
+- **Water dynamics** in ponds and droplets.
+- **Cloth behavior** for realistic flag movements.
+- **Rigid and deformable object interactions**, exemplified by rocks and mushrooms.
+- **Custom Shader Development**: ShaderLab scripts for realistic planetary gradients and ocean waves.
+- **Real-time Animations**: Integrated with Unity's Input System package for responsive and natural avatar movements.
+- **Immersive Camera and Lighting**: First-person camera setups with dynamic rotation and adaptive lighting for atmospheric realism.
 
 ### 🛠️ Technologies and Tools
 
@@ -64,27 +54,26 @@ Echoes_of_Europa/
 │   └── Textures/
 ├── ProjectSettings/
 ├── bin/
-└── ReportIng.docx.pdf
 ```
 
 ### 🖼️ Screenshots
 
 | Beach Scene 🌊 | Cave Scene 🕳️ |
 |:--------------:|:--------------:|
-| ![Beach](link_to_beach_image) | ![Cave](link_to_cave_image) |
+| ![Beach](screenshots/beach.png) | ![Cave](screenshots/cave.png) |
 
 | Forest Scene 🌳 | Cliff Scene ⛰️ |
 |:---------------:|:---------------:|
-| ![Forest](link_to_forest_image) | ![Cliff](link_to_cliff_image) |
+| ![Forest](screenshots/forest.png) | ![Cliff](screenshots/hike.png) |
 
 
 ### 🎬 Demonstration Video
 
-Watch the complete exploration and technical demo here.
+Watch the complete exploration and technical demo [here](https://drive.google.com/file/d/1Y5p1qhuIvTr1_AzgaMqIDnX1EYO-SuxD/view).
 
 #### 📖 Technical Documentation
 
-In-depth methodological documentation can be found in the provided Report.
+The technical documentation delves into every aspect of the project’s development pipeline: it explains how 3D assets were modeled in Blender using geometric, hierarchical, mechanical, organic, and physics-based techniques; details how NVIDIA Flex was integrated into Unity to simulate water behavior, cloth dynamics, rigid-body interactions, and soft-body deformations; outlines the process of creating custom ShaderLab scripts (including the DistantPlanetShader for realistic planetary gradients and the Ocean_waves shader for dynamic water surfaces); describes how animations and user input were implemented via Unity’s Input System, FPSController, and Animator components; and covers UI layering for HUD elements, scene transition logic using canvas-based triggers, and dynamic lighting setups that drive the day–night cycle and first-person flashlight. Each section provides step‑by‑step explanations, code snippets, and asset‑organization strategies to guide users through reproducing or extending the core systems.
 
 ### 🚀 Getting Started
 
@@ -103,13 +92,10 @@ Explore scenes in the Scenes directory to engage with the simulations and enviro
 
 ### 📚 Authors
 
-Giovanni Salvador Chávez Villanueva
-
-Daniel Alejandro Cruz Cedillo
-
-Vanessa Nava Alberto
-
-José Luis Tapia Estevez
+- Giovanni Salvador Chávez Villanueva
+- Daniel Alejandro Cruz Cedillo
+- Vanessa Nava Alberto
+- José Luis Tapia Estevez
 
 ### 🎯 Purpose
 
